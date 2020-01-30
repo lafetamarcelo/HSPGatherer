@@ -187,25 +187,39 @@ class _InitialScreenState extends State<InitialScreen> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.lightBlue,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.assignment),
-            title: Text('Exames')
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_box),
-            title: Text('Consulta')
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_add),
-            title: Text('Usuarios')
-          )
-        ],
-        onTap: (iconIndex) => _onBarEntryTap(context, iconIndex),
+      bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        notchMargin: 10,
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.library_books
+              ),
+              onPressed: (){},
+            ),
+            Container(
+              height: 20,
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.info_outline,
+              ),
+              onPressed: (){},
+            )
+          ],
+        ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.file_download
+        ),
+        onPressed: (){},
+      ),
+      floatingActionButtonLocation: 
+        FloatingActionButtonLocation.centerDocked,
     );
   }
 

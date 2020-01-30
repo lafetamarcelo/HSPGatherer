@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
       final Map<String, dynamic> arguments = settings.arguments;
       Widget screen;
       switch (settings.name) {
-        case LocationRoute
       }
     };
   }
